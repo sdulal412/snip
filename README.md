@@ -19,14 +19,13 @@
 
 ## <a name="introduction">Introduction</a>
 
-Classic Tetris clone featuring a Python (Flask) logic engine and an Angular 18 frontend.
+TBD
 
 ## <a name="key-features">Key Features</a>
 
-- Ultra-Responsive UI: Scales perfectly to any screen size using CSS transforms.
-- Theme Engine: Quick toggle between Dark/Light modes and Ghost piece visibility.
-- Logic Isolation: Game mechanics and collision detection are handled entirely in Python.
-- Synthesized Sound: Unique audio profiles for Move, Rotate, Clear, and Drop using mathematical oscillators (Zero asset files).
+- TBD
+- TBD
+- TBD
 
 
 ## <a name="project-structure">Project Structure</a>
