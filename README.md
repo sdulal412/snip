@@ -1,9 +1,8 @@
 <div align="center">
   <br />
     <a>
-      <img width="1531" height="707" alt="Snip-photo" src="snip.png" />
+      <img width="1531" height="707" alt="Snip-photo" src="client/public/snip.jpg" />
     </a>
-
 
   <br />
   <h3 align="center"> Snip - URL Shortner, QR Generator </h3>
@@ -19,39 +18,56 @@
 
 ## <a name="introduction">Introduction</a>
 
-TBD
+Shorten, share, and track with ease. Instantly convert lengthy URLs into custom short links and high-resolution QR codes, complete with full management controls in a single streamlined hub.
 
 ## <a name="key-features">Key Features</a>
 
-- TBD
-- TBD
-- TBD
+- Smart URL Shortener — Generate unique, compact links in seconds.
+- Instant QR Generation — Produce dynamic QR codes directly from your short URLs.
+- Intuitive Analytics & History — Monitor and organize all past links from a single view.
+- Full Link Control — Copy, preview, refresh, or remove links seamlessly.
 
 
 ## <a name="project-structure">Project Structure</a>
 
 ```bash
 snip/
-├── frontend/
-│    ├── angular.json
-│    ├── package.json
-│    ├── package-lock.json
-│    ├── tsconfig.json
-│    ├── tsconfig.app.json
-│    └── src/
-│       ├── main.ts
-│       ├── styles.css
-│       ├── index.html
-│       ├── app/
-│       │     ├──app.component.ts
-│       │     ├──app.component.css
-│       │     └──app.component.html
-│       ├── env/
-│            ├──env.ts
-│            └──env.dev.ts
-├── README.md
-├── snip.png
-└── .gitignore
+├── client/                     # Angular Frontend
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/
+│   │   │   │   ├── dashboard/
+│   │   │   │   ├── navbar/
+│   │   │   │   └── home/
+│   │   │   │
+│   │   │   ├── models/
+│   │   │   │   └── url-item.ts
+│   │   │   │
+│   │   │   ├── services/
+│   │   │   │   └── url.ts
+│   │   │   │
+│   │   │   ├── app.component.ts
+│   │   │   ├── app.config.ts
+│   │   │   └── app.routes.ts
+│   │   │
+│   │   ├── main.ts
+│   │   ├── styles.css
+│   │   └── index.html
+│   │
+│   ├── angular.json
+│   ├── tsconfig.json
+│   └── package.json
+│
+├── server/                     # Backend (Node.js)
+│   ├── src/
+│   │   ├── data/urls.json
+│   │   ├── routes/urlRoutes.js
+│   │   └── utils/fileStorejs
+│   ├── server.js
+│   └── package.json
+│
+├── .gitignore
+└── README.md
 
 ```
 
@@ -59,19 +75,37 @@ snip/
 
 ### Prerequisites
 
-- npm or yarn
-- Node.js (v18 or higher)
-- Angular CLI (optional but recommended)
+- npm or Yarn
+- Node.js (v18+)
+- Angular CLI (optional)
+
+1. Clone
+```bash
+# Clone the Repository
+git clone https://github.com/sdulal412/snip.git
+cd snip
+```
+
+2. Backend
+```bash
+cd server
+
+# Install dependencies (only the first time)
+npm install
+
+# Run the local server on http://localhost:3000
+npm run dev
+```
+
+3. Frontend
 
 ```bash
+cd client
+
 # Install dependencies (only the first time)
-npm install --legacy-peer-deps
+npm install
 
-# Generate a new Component
-ng generate component `component-name`
-# Or
-ng generate directive|pipe|service|class|guard|interface|enum|module
-
-# Run the local server at http://localhost:4200
+# Runs the local on http://localhost:4200
 ng serve
+
 ```
